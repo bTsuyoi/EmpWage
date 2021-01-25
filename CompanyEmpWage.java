@@ -1,27 +1,25 @@
+package UC11;
 
 public class CompanyEmpWage {
+	private String company;
+	public int empRate;
+	public int noOfWorkingDays;
+	public int noOfHoursPerMonth;
+	private int totalEmpWage;
+	public CompanyEmpWage(String company,int empRate,int noOfWorkingDays,int noOfHoursPerMonth) {
+		this.company = company;
+		this.empRate = empRate;
+		this.noOfWorkingDays = noOfWorkingDays;
+		this.noOfHoursPerMonth= noOfHoursPerMonth;
+	}
+	public int getTotalEmpWage() {
+		return totalEmpWage;
+	}
+	public void setTotalEmpWage(int totalEmpWage) {
+		this.totalEmpWage = totalEmpWage;
+	}
+	public String toString() {
+		return "Total Employee Wage of " + company + " is " + totalEmpWage;	
+	}
 
-    // Variables
-    public final String company;
-    public final int empRatePerHr;
-    public final int noOfWorkingDays;
-    public final int maxHrsPeronth;
-    public int totalEmpWage;
-
-    // Constructer
-    public CompanyEmpWage(String company, int empRatePerHr, int noOfWorkingDays, int maxHrsPeronth) {
-        this.company = company;
-        this.empRatePerHr = empRatePerHr;
-        this.noOfWorkingDays = noOfWorkingDays;
-        this.maxHrsPeronth = maxHrsPeronth;
-    }// End of Constructer
-
-    public void setTotalEmpWage(int totalEmpWage) {
-        this.totalEmpWage = totalEmpWage;
-    }
-
-    @Override
-    public String toString() {
-        return "Total Emp Wage for Company:" + company + " is: " + totalEmpWage + "\n";
-    }
 }
